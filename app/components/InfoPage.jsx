@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import img0 from "../assets/images/0.png";
+import software from "../assets/images/software.webp";
 import img1 from "../assets/images/1.png";
-import img2 from "../assets/images/whoop-cafe.webp";
-import img3 from "../assets/images/harvard-steps.webp";
+import img2 from "../assets/images/2.jpg";
+import img3 from "../assets/images/1.jpg";
 import gro from "../assets/images/gro.png";
 import resolv from "../assets/images/resolv.png";
 import { Twitter, Linkedin, Globe, Mail, Github } from "lucide-react";
@@ -73,7 +73,7 @@ const InfoPage = () => {
             in the intersection of software and personal health.
           </p>
         </div>
-        <Image src={img0} className="relative left-0 mb-[8rem]"></Image>
+        <Image src={software} className="relative left-0 mb-[8rem]"></Image>
         <div className="section-one text-6xl mb-[8rem] leading-[1]">
           <p className="animated inline-block w-[60%] font-semibold">
             {`I WANT TO SPEND THE REST OF MY LIFE BUILDING SOFTWARE THAT ENHANCES
@@ -86,7 +86,6 @@ const InfoPage = () => {
             src="https://drive.google.com/file/d/1pf0zSwgYH2oAd5o6n2qvPDXXx2xhVJBO/preview"
             allow="autoplay"
           ></iframe>
-          {/* <Image className="w-1/2" src={img1}></Image> */}
           <div className="w-[41.6%] flex flex-col items-center justify-evenly gap-8">
             <h className="text-5xl font-semibold">
               And I believe I have the experience, background, and level of

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import img from "../assets/images/0.png";
+import img from "../assets/images/0.webp";
 import Header from "./Header";
 import { useEffect } from "react";
 
@@ -11,7 +11,7 @@ const LandingPage = () => {
     <div className="landing-screen h-screen w-full z-0">
       <Header></Header>
       <Image
-        className="w-full absolute z-[-10]"
+        className="w-full absolute z-[-10] translate-y-[-8rem]"
         src={img}
         alt="hero-or-whatever"
       ></Image>
