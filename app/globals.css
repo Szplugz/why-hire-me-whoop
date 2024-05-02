@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes floatUpFadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUpFadeInButton {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.float-up-fade-in {
+  animation: floatUpFadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.float-up-fade-in-button {
+  animation: floatUpFadeInButton 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}

@@ -62,7 +62,7 @@ const InfoPage = () => {
   return (
     <>
       <div className="bg-white w-full z-10 mt-[-5vh] rounded-t-[2rem] p-24 relative">
-        <div className="section-one text-[5rem] mb-8">WHO AM I?</div>
+        <div className="animated section-one text-[5rem] mb-8">WHO AM I?</div>
         <div className="section-one text-2xl mb-[8rem] flex justify-end">
           <p className="inline-block w-[60%]">
             I’m a 21 y/o final-year computer science & psychology student at
@@ -74,7 +74,7 @@ const InfoPage = () => {
         </div>
         <Image src={img0} className="relative left-0 mb-[8rem]"></Image>
         <div className="section-one text-6xl mb-[8rem] leading-[1]">
-          <p className="inline-block w-[60%] font-semibold">
+          <p className="animated inline-block w-[60%] font-semibold">
             {`I WANT TO SPEND THE REST OF MY LIFE BUILDING SOFTWARE THAT ENHANCES
         PEOPLE'S HEALTH`}
           </p>
@@ -114,7 +114,7 @@ const InfoPage = () => {
         <div className="section-4a text-5xl text-center mb-24">
           <span className="text-[#696969]">{`“A personal interest in WHOOP’s mission is great, but do you have the qualities needed to succeed in building a complex product in a high-stakes environment?”`}</span>
         </div>
-        <div className="section-4b text-5xl text-center mb-[8rem] font-bold">
+        <div className="animated section-4b text-5xl text-center mb-[8rem] font-bold">
           {`I believe I do.`}
         </div>
         <div className="section-5-accordion flex">
@@ -224,7 +224,7 @@ const InfoPage = () => {
           </h>
         </div>
         <div className="section-6 flex gap-16 mb-24">
-          <div className="section-6-heading text-5xl w-1/2">{`With that said, I can provide value in a lot of different ways, depending on where help is needed.`}</div>
+          <div className="animated section-6-heading text-5xl w-1/2">{`With that said, I can provide value in a lot of different ways, depending on where help is needed.`}</div>
           <div className="section-6-text text-xl w-1/2 flex flex-col gap-8">
             <p>{`I spend most of my time working on user interfaces, which is what I would prefer to do at WHOOP. I can help build, design and enhance WHOOP's website and web client. I also have some experience building in Swift and React Native, and I'm willing to help out with the iOS app as well.`}</p>
             <p>{`That's not all I can do, though. As a fullstack engineer, I also work quite a lot on the backend, writing algorithms and working with APIs and databases. Additionally, I have a strong mathematical and scientific background, so if need be, I would be more than happy to work on backend services. I've always wondered what goes on behind the scenes of WHOOP's performance calculations.`}</p>
@@ -233,7 +233,7 @@ const InfoPage = () => {
         </div>
       </div>
       <div className="w-full bg-white z-10 relative px-24 pb-24">
-        <div className="section-6 text-5xl mb-24">
+        <div className="animated section-6 text-5xl mb-24">
           WHY HIRE <em className="font-bold underline">ME</em>?
         </div>
         <div className="section-6 flex justify-end mb-24">
@@ -282,7 +282,7 @@ const InfoPage = () => {
           id="contact"
           className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center"
         >
-          <h className="inline-block w-[60%]">
+          <h className="animated inline-block w-[60%]">
             I would love to hop on a call to explore how I can make a difference
             at WHOOP. Feel free to reach out to me through any of these
             channels!
@@ -309,7 +309,7 @@ const InfoPage = () => {
           </Link>
         </div>
         <div className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center">
-          <h className="inline-block w-[60%]">
+          <h className="animated inline-block w-[60%]">
             If you want to learn more about me, check out my website and github.
             Thanks for reading through this website, and I hope we can be in
             touch soon!
