@@ -61,7 +61,7 @@ const InfoPage = () => {
 
   return (
     <>
-      <div className="bg-white w-full z-10 mt-[calc(95vh)] rounded-t-[2rem] p-24 relative">
+      <div className="bg-white w-full z-10 mt-[-5vh] rounded-t-[2rem] p-24 relative">
         <div className="section-one text-[5rem] mb-8">WHO AM I?</div>
         <div className="section-one text-2xl mb-[8rem] flex justify-end">
           <p className="inline-block w-[60%]">

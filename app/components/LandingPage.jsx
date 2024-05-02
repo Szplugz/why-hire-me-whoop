@@ -5,7 +5,7 @@ import Header from "./Header";
 
 const LandingPage = () => {
   return (
-    <div className="landing-screen h-screen w-full fixed top-0 left-0 z-0">
+    <div className="landing-screen h-screen w-full z-0">
       <Header></Header>
       <Image
         className="w-full absolute z-[-10]"

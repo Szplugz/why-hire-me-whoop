@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/xhw5akq.css" />
       </head>
-      <body className="font-proxima-nova">{children}</body>
+      <body className="font-proxima-nova">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
