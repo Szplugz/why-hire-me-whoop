@@ -8,7 +8,7 @@ import img2 from "../assets/images/whoop-cafe.webp";
 import img3 from "../assets/images/harvard-steps.webp";
 import gro from "../assets/images/gro.png";
 import resolv from "../assets/images/resolv.png";
-import { Twitter, Linkedin, Globe, Mail, GitHub } from "lucide-react";
+import { Twitter, Linkedin, Globe, Mail, Github } from "lucide-react";
 import { Accordion } from "./Accordion";
 import { AccordionTrigger } from "./Accordion";
 import { AccordionItem } from "./Accordion";
@@ -278,32 +278,56 @@ const InfoPage = () => {
             </div>
           </div>
         </div>
-        <div className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center">
+        <div
+          id="contact"
+          className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center"
+        >
           <h className="inline-block w-[60%]">
             I would love to hop on a call to explore how I can make a difference
             at WHOOP. Feel free to reach out to me through any of these
             channels!
           </h>
         </div>
-        <div className="section-8-contact flex gap-8 overflow-x-scroll">
-          <Card additionalStyles="hover:bg-white border">
-            <Linkedin />
-            <p className="text-xl font-semibold">LinkedIn</p>
-          </Card>
+        <div className="section-8-contact flex gap-8 overflow-x-scroll mb-24 justify-center">
+          <Link href="https://twitter.com/Szplugz" target="_blank">
+            <Card additionalStyles="hover:bg-white border">
+              <Twitter />
+              <p className="text-xl font-semibold">Twitter</p>
+            </Card>
+          </Link>
+          <Link href="https://www.linkedin.com/in/neelkhare/" target="_blank">
+            <Card additionalStyles="hover:bg-white border">
+              <Linkedin />
+              <p className="text-xl font-semibold">LinkedIn</p>
+            </Card>
+          </Link>
+          <Link href="mailto:neelk2@illinois.edu" target="_blank">
+            <Card additionalStyles="hover:bg-white border">
+              <Mail />
+              <p className="text-xl font-semibold">Email</p>
+            </Card>
+          </Link>
+        </div>
+        <div className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center">
+          <h className="inline-block w-[60%]">
+            If you want to learn more about me, check out my website and github.
+            Thanks for reading through this website, and I hope we can be in
+            touch soon!
+          </h>
+        </div>
+        <div className="section-8-contact flex gap-8 overflow-x-scroll justify-center">
           <Link href="https://neelkhare.com" target="_blank">
             <Card additionalStyles="hover:bg-white border">
               <Globe />
               <p className="text-xl font-semibold">Website</p>
             </Card>
           </Link>
-          <Card additionalStyles="hover:bg-white border">
-            <Linkedin />
-            <p className="text-xl font-semibold">LinkedIn</p>
-          </Card>
-          <Card additionalStyles="hover:bg-white border">
-            <Linkedin />
-            <p className="text-xl font-semibold">LinkedIn</p>
-          </Card>
+          <Link href="https://github.com/szplugz" target="_blank">
+            <Card additionalStyles="hover:bg-white border">
+              <Github />
+              <p className="text-xl font-semibold">Github</p>
+            </Card>
+          </Link>
         </div>
       </div>
     </>
