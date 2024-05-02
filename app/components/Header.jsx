@@ -9,7 +9,7 @@ const Header = () => {
           const element = document.getElementById("contact");
           element.scrollIntoView({ behavior: "smooth" });
         }}
-        className="rounded-full px-4 py-2 bg-white font-medium"
+        className="rounded-full px-4 py-2 bg-white font-medium hover:bg-[#e2e2e2] transition-all"
       >
         GET IN TOUCH
       </button>

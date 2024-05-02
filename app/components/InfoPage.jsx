@@ -36,6 +36,7 @@ const InfoPage = () => {
 
   const handleClick = () => {
     setTrigger(!trigger);
+    setcurrWorkImage(null);
   };
 
   useEffect(() => {
@@ -111,7 +112,7 @@ const InfoPage = () => {
             </div>
           </div>
         </div>
-        <div className="section-4a text-5xl text-center mb-24">
+        <div className="section-4a text-5xl text-center mb-[8rem]">
           <span className="text-[#696969]">{`“A personal interest in WHOOP’s mission is great, but do you have the qualities needed to succeed in building a complex product in a high-stakes environment?”`}</span>
         </div>
         <div className="animated section-4b text-5xl text-center mb-[8rem] font-bold">
@@ -119,7 +120,7 @@ const InfoPage = () => {
         </div>
         <div className="section-5-accordion flex">
           <Accordion collapsible className="w-1/2">
-            <div className="py-16">
+            <div className="">
               <h className="text-5xl font-bold mb-16 inline-block">
                 My Professional Experience
               </h>
@@ -151,6 +152,7 @@ const InfoPage = () => {
             {currWorkImage && (
               <Image
                 id="accordionImage"
+                className="float-up-fade-in"
                 alt="accordion image"
                 src={workImages[currWorkImage]}
                 width={800}
@@ -182,14 +184,14 @@ const InfoPage = () => {
                 <AccordionTrigger className="text-3xl" value="resolv">
                   01 feynman - simplifying academic articles
                 </AccordionTrigger>
-                <AccordionContent>{`An AI tool that simplifies academic papers without loss of information so that anyone can extract relevant, actionable information from them. I built this mostly because I was getting tired of hearing conflicting opinions about nutrition data and was having a hard time understanding the statistical methods and industry-specific jargon used in the studies I was reading. Learning a lot about async requests, data streaming, and CSS.
+                <AccordionContent>{`An AI tool that simplifies academic papers without loss of information so that anyone can extract relevant, actionable information from them. I built this mostly because I was getting tired of hearing conflicting opinions about nutrition data and was having a hard time understanding the statistical methods and industry-specific jargon used in the studies I was reading. Learning a lot about various web apis, performance optimization, async requests, data streaming, and CSS.
 `}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="neelkhare" onClick={handleClick}>
                 <AccordionTrigger className="text-3xl">
                   02 neelkhare.com - my personal website
                 </AccordionTrigger>
-                <AccordionContent>{`it's more complicated than it should be, and that's only because I wanted to implement almost everything from scratch to teach myself the fundamentals of web architecture.
+                <AccordionContent>{`My over-engineered personal website, which also serves as a playground for learning web tools. I wanted to teach myself the fundamentals of web development, almost everythng you see on the website is built from scratch or uses minimal external libraries. Learned a lot about animations, CDNs, SSR, markdown parsing, and CI/CD.
 
 `}</AccordionContent>
               </AccordionItem>
@@ -197,7 +199,7 @@ const InfoPage = () => {
                 <AccordionTrigger className="text-3xl">
                   03 the library of life
                 </AccordionTrigger>
-                <AccordionContent>{`An iOS app that uses AI to answer questions you have about the podcasts you listen to. Started this project not only because I have a lot of unsanswered questions for podcast hosts, but also because I want to be able to quickly retrieve information from lengthy, information-dense episodes.
+                <AccordionContent>{`An iOS app that uses AI to answer questions you have about the podcasts you listen to. Started this project not only because I have a lot of unsanswered questions for podcast hosts, but also because I want to be able to quickly retrieve information from lengthy, information-dense episodes. Learned a lot about design and Swift development.
 `}</AccordionContent>
               </AccordionItem>
               <AccordionItem value="other" onClick={handleClick}>
@@ -206,7 +208,25 @@ const InfoPage = () => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul>
-                    <li>{`Built websites for Quant and Resolv`}</li>
+                    <li>
+                      Built websites and created design systems for{" "}
+                      <a
+                        href="https://quantillinois.com"
+                        target="_blank"
+                        className="underline"
+                      >
+                        Quant
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="https://resolv.finance"
+                        target="_blank"
+                        className="underline"
+                      >
+                        Resolv
+                      </a>
+                      .
+                    </li>
                     <li>{`Taught as a CA for CS classes at UIUC`}</li>
                     <li>{`Participated in a few hackathons`}</li>
                   </ul>
@@ -215,7 +235,7 @@ const InfoPage = () => {
             </div>
           </Accordion>
         </div>
-        <div className="section-6 flex mb-24 px-6 py-12 bg-black text-white rounded-3xl items-center justify-center">
+        <div className="section-6 flex mb-48 px-6 py-12 bg-black text-white rounded-3xl items-center justify-center">
           <h className="section-6-text text-3xl w-[80%] inline-block">
             My tech stack mainly consists of React, Next.js, Python, Node, and
             TailwindCSS, and I&apos;ve worked with GraphQL, Postgres, AWS, and
@@ -223,7 +243,7 @@ const InfoPage = () => {
             in a great position to thrive as a Fullstack Engineer at WHOOP.
           </h>
         </div>
-        <div className="section-6 flex gap-16 mb-24">
+        <div className="section-6 flex gap-16 mb-[8rem]">
           <div className="animated section-6-heading text-5xl w-1/2">{`With that said, I can provide value in a lot of different ways, depending on where help is needed.`}</div>
           <div className="section-6-text text-xl w-1/2 flex flex-col gap-8">
             <p>{`I spend most of my time working on user interfaces, which is what I would prefer to do at WHOOP. I can help build, design and enhance WHOOP's website and web client. I also have some experience building in Swift and React Native, and I'm willing to help out with the iOS app as well.`}</p>
@@ -233,13 +253,13 @@ const InfoPage = () => {
         </div>
       </div>
       <div className="w-full bg-white z-10 relative px-24 pb-24">
-        <div className="animated section-6 text-5xl mb-24">
+        <div className="animated section-6 text-5xl mb-[8rem]">
           WHY HIRE <em className="font-bold underline">ME</em>?
         </div>
-        <div className="section-6 flex justify-end mb-24">
+        <div className="section-6 flex justify-end mb-[8rem]">
           <h className=" text-3xl w-2/3 inline-block">{`I’m pretty proud of the work I’ve done in the past, but that’s only half of the story. I think you’ll find that I’m just as good of a colleague as I am an engineer - hopefully even better.`}</h>
         </div>
-        <div className="section-7 flex gap-8 mb-24">
+        <div className="section-7 flex gap-8 mb-[8rem]">
           <div className="section-7-left flex flex-col gap-8 w-1/2">
             <div className="flex flex-col gap-4 justify-center text-center bg-[#f3f5f9] rounded-3xl p-12 min-h-[300px]">
               <h className="text-4xl font-semibold">{`I'm high-agency`}</h>
@@ -280,7 +300,7 @@ const InfoPage = () => {
         </div>
         <div
           id="contact"
-          className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center"
+          className="section-8-heading text-5xl text-[#696969] text-center mb-[8rem] flex justify-center"
         >
           <h className="animated inline-block w-[60%]">
             I would love to hop on a call to explore how I can make a difference
@@ -288,7 +308,7 @@ const InfoPage = () => {
             channels!
           </h>
         </div>
-        <div className="section-8-contact flex gap-8 overflow-x-scroll mb-24 justify-center">
+        <div className="section-8-contact flex gap-8 overflow-x-scroll mb-[8rem] justify-center">
           <Link href="https://twitter.com/Szplugz" target="_blank">
             <Card additionalStyles="hover:bg-white border">
               <Twitter />
@@ -308,7 +328,7 @@ const InfoPage = () => {
             </Card>
           </Link>
         </div>
-        <div className="section-8-heading text-5xl text-[#696969] text-center mb-24 flex justify-center">
+        <div className="section-8-heading text-5xl text-[#696969] text-center mb-[8rem] flex justify-center">
           <h className="animated inline-block w-[60%]">
             If you want to learn more about me, check out my website and github.
             Thanks for reading through this website, and I hope we can be in
