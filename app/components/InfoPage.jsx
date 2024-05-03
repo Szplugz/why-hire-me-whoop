@@ -281,7 +281,7 @@ const InfoPage = () => {
         </div>
         <div className="section-6 flex flex-col sm:flex-row gap-16 mb-[8rem]">
           <div className="animated section-6-heading text-3xl sm:text-5xl sm:w-1/2">{`With that said, I can provide value in a lot of different ways, depending on where help is needed.`}</div>
-          <div className="section-6-text sm:text-xl text-lg sm:w-1/2 flex flex-col gap-8">
+          <div className="section-6-text text-xl sm:w-1/2 flex flex-col gap-8">
             <p>{`I spend most of my time working on user interfaces, which is what I would prefer to do at WHOOP. I can help build, design and enhance WHOOP's website and web client. I also have some experience building in Swift and React Native, and I'm willing to help out with the iOS app as well.`}</p>
             <p>{`That's not all I can do, though. As a fullstack engineer, I also work quite a lot on the backend, writing algorithms and working with APIs and databases. Additionally, I have a strong mathematical and scientific background, so if need be, I would be more than happy to work on backend services. I've always wondered what goes on behind the scenes of WHOOP's performance calculations.`}</p>
             <p>{`If there are no full-time engineering or design positions available, I'd also be open to exploring internship options. I'm less concerned about the structure of my work than I am with doing whatever I can to help improve human performance.`}</p>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex absolute flex-col justify-end bg-black w-full h-[300px] top-[-220px]">
+    <div className="flex absolute flex-col justify-end bg-black w-full h-[300px] top-[-200px] sm:top-[-220px]">
       <div className="bg-black absolute w-full py-4 sm:px-[4rem] px-4 flex justify-between items-center">
         <h1 className="text-white sm:text-4xl text-lg">NEEL KHARE</h1>
         <button
