@@ -9,6 +9,8 @@ import img3 from "../assets/images/1.jpg";
 import gro from "../assets/images/gro.png";
 import resolv from "../assets/images/resolv.png";
 import neelkhare from "../assets/images/neelkhare.png";
+import feynman from "../assets/images/feynman.png";
+import huberman from "../assets/images/huberman.svg";
 import { Twitter, Linkedin, Globe, Mail, Github } from "lucide-react";
 import { Accordion } from "./Accordion";
 import { AccordionTrigger } from "./Accordion";
@@ -24,8 +26,8 @@ const workImages = {
 };
 
 const projectImages = {
-  //   feynman: feynman,
-  //   huberman: huberman,
+  feynman: feynman,
+  huberman: huberman,
   neelkhare: neelkhare,
   other: null,
 };
@@ -181,7 +183,7 @@ const InfoPage = () => {
               </AccordionItem>
             </div>
           </Accordion>
-          <div className="section-5-accordion-images sm:flex hidden items-center justify-center w-1/2 p-16">
+          <div className="second section-5-accordion-images sm:flex hidden items-center justify-center w-1/2 p-16">
             {currWorkImage && (
               <Image
                 id="accordionImage"
@@ -197,11 +199,12 @@ const InfoPage = () => {
       </div>
       <div className="bg-white w-full z-10 sm:px-24 px-8 relative">
         <div className="section-5-accordion flex mb-24">
-          <div className="hidden section-5-accordion-images sm:flex items-center justify-center w-1/2">
+          <div className="hidden section-5-accordion-images sm:flex items-center justify-center w-1/2 p-16">
             {currProjectImage && (
               <Image
                 id="accordionImage"
                 alt="accordion image"
+                className="float-up-fade-in"
                 src={projectImages[currProjectImage]}
                 width={800}
                 height={150}
