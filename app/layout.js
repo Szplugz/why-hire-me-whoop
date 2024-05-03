@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="https://use.typekit.net/xhw5akq.css" />
       </head>
       <body className="font-proxima-nova">
