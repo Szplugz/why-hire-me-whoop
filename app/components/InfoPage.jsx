@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import software from "../assets/images/software.webp";
-import img1 from "../assets/images/1.png";
 import img2 from "../assets/images/2.jpg";
 import img3 from "../assets/images/1.jpg";
 import gro from "../assets/images/gro.png";
@@ -21,15 +20,19 @@ import Card from "./Card";
 import Link from "next/link";
 
 const workImages = {
-  resolv: resolv,
-  gro: gro,
+  resolv: [resolv, "https://resolv.finance"],
+  gro: [gro, "#"],
+  mediaocean: [undefined, "#"],
 };
 
 const projectImages = {
-  feynman: feynman,
-  huberman: huberman,
-  neelkhare: neelkhare,
-  other: null,
+  feynman: [feynman, "https://github.com/szplugz/feynman"],
+  huberman: [
+    huberman,
+    "https://www.figma.com/file/jTAzLBxLkMJBwXEUXik16a/The-Huberman-Library?type=design&node-id=0-1&mode=design&t=oukzpleAQN97IIQO-0",
+  ],
+  neelkhare: [neelkhare, "https://neelkhare.com"],
+  other: [null, "#"],
 };
 
 const InfoPage = () => {
@@ -68,7 +71,6 @@ const InfoPage = () => {
       }
     });
 
-    // Update the image based on the openItemValue
     console.log("Updating image to ", openItemValue);
     setcurrWorkImage(openItemValue);
   };
@@ -85,7 +87,6 @@ const InfoPage = () => {
       }
     });
 
-    // Update the image based on the openItemValue
     console.log("Updating image to ", openItemValue);
     console.log(projectImages[currProjectImage]);
     setcurrProjectImage(openItemValue);
@@ -185,14 +186,25 @@ const InfoPage = () => {
           </Accordion>
           <div className="second section-5-accordion-images sm:flex hidden items-center justify-center w-1/2 p-16">
             {currWorkImage && (
-              <Image
-                id="accordionImage"
-                className="float-up-fade-in"
-                alt="accordion image"
-                src={workImages[currWorkImage]}
-                width={800}
-                height={150}
-              ></Image>
+              <Link
+                href={
+                  workImages[currWorkImage] ? workImages[currWorkImage][1] : "#"
+                }
+                target="_blank"
+              >
+                <Image
+                  id="accordionImage"
+                  className="float-up-fade-in"
+                  alt="accordion image"
+                  src={
+                    workImages[currWorkImage]
+                      ? workImages[currWorkImage][0]
+                      : undefined
+                  }
+                  width={800}
+                  height={150}
+                ></Image>
+              </Link>
             )}
           </div>
         </div>
@@ -201,14 +213,16 @@ const InfoPage = () => {
         <div className="section-5-accordion flex mb-24">
           <div className="hidden section-5-accordion-images sm:flex items-center justify-center w-1/2 p-16">
             {currProjectImage && (
-              <Image
-                id="accordionImage"
-                alt="accordion image"
-                className="float-up-fade-in"
-                src={projectImages[currProjectImage]}
-                width={800}
-                height={150}
-              ></Image>
+              <Link href={projectImages[currProjectImage][1]} target="_blank">
+                <Image
+                  id="accordionImage"
+                  alt="accordion image"
+                  className="float-up-fade-in"
+                  src={projectImages[currProjectImage][0]}
+                  width={800}
+                  height={150}
+                ></Image>
+              </Link>
             )}
           </div>
           <Accordion collapsible className="sm:w-1/2 w-full">
@@ -245,15 +259,18 @@ const InfoPage = () => {
                 <AccordionContent>
                   <ul>
                     <li>
-                      Built websites and created design systems for{" "}
+                      Chief Technology Officer at{" "}
                       <a
                         href="https://quantillinois.com"
                         target="_blank"
                         className="underline"
                       >
                         Quant
-                      </a>{" "}
-                      and{" "}
+                      </a>
+                      .
+                    </li>
+                    <li>
+                      Built websites and created design systems for Quant and{" "}
                       <a
                         href="https://resolv.finance"
                         target="_blank"
