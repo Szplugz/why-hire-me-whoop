@@ -22,7 +22,7 @@ import Link from "next/link";
 const workImages = {
   resolv: [resolv, "https://resolv.finance"],
   gro: [gro, "#"],
-  mediaocean: [undefined, "#"],
+  mediaocean: null,
 };
 
 const projectImages = {
@@ -32,7 +32,7 @@ const projectImages = {
     "https://www.figma.com/file/jTAzLBxLkMJBwXEUXik16a/The-Huberman-Library?type=design&node-id=0-1&mode=design&t=oukzpleAQN97IIQO-0",
   ],
   neelkhare: [neelkhare, "https://neelkhare.com"],
-  other: [null, "#"],
+  other: null,
 };
 
 const InfoPage = () => {
@@ -185,22 +185,13 @@ const InfoPage = () => {
             </div>
           </Accordion>
           <div className="second section-5-accordion-images sm:flex hidden items-center justify-center w-1/2 p-16">
-            {currWorkImage && (
-              <Link
-                href={
-                  workImages[currWorkImage] ? workImages[currWorkImage][1] : "#"
-                }
-                target="_blank"
-              >
+            {workImages[currWorkImage] && (
+              <Link href={workImages[currWorkImage][1]} target="_blank">
                 <Image
                   id="accordionImage"
                   className="float-up-fade-in"
                   alt="accordion image"
-                  src={
-                    workImages[currWorkImage]
-                      ? workImages[currWorkImage][0]
-                      : undefined
-                  }
+                  src={workImages[currWorkImage][0]}
                   width={800}
                   height={150}
                 ></Image>
@@ -212,7 +203,7 @@ const InfoPage = () => {
       <div className="bg-white w-full z-10 sm:px-24 px-8 relative">
         <div className="section-5-accordion flex mb-24">
           <div className="hidden section-5-accordion-images sm:flex items-center justify-center w-1/2 p-16">
-            {currProjectImage && (
+            {projectImages[currProjectImage] && (
               <Link href={projectImages[currProjectImage][1]} target="_blank">
                 <Image
                   id="accordionImage"
@@ -252,7 +243,7 @@ const InfoPage = () => {
                 <AccordionContent>{`An iOS app that uses AI to answer questions you have about the podcasts you listen to. Started this project not only because I have a lot of unsanswered questions for podcast hosts, but also because I want to be able to quickly retrieve information from lengthy, information-dense episodes. Learned a lot about design and Swift development.
 `}</AccordionContent>
               </AccordionItem>
-              <AccordionItem value="other" onClick={handleClick}>
+              <AccordionItem value="other" onClick={handleProjectClick}>
                 <AccordionTrigger className="text-xl sm:text-3xl">
                   04 other stuff
                 </AccordionTrigger>
